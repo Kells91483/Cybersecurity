@@ -1,4 +1,4 @@
-## The Final Cybersecurity Bootcamp Project
+# The Final Cybersecurity Bootcamp Project
 
 Offensive Stage
 
@@ -13,11 +13,11 @@ You will then report back all your findings to both the SOC manager and the Engi
 -Exploitation
 -Exposed Services
 
-# Nmap scan results for each machine reveal the below services and OS details:
+Nmap scan results for each machine reveal the below services and OS details:
 
 $ nmap -A -T4 192.168.1.110
   
-# This scan identifies the services below as potential points of entry:
+ This scan identifies the services below as potential points of entry:
 
 Target 1
 

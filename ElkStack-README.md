@@ -8,13 +8,19 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 my_playbook.yml
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/My-Playbook.jpg)
+
 install-elk.yml
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/Install_elk.jpg)
 
 filebeat-playbook.yml
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/filebeat-playbook.jpg)
+
 metric-beat.yml
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/Metricbeat-playbook.jpg)
 
 This document contains the following details:
 
@@ -86,6 +92,7 @@ Starts the software, forcibly if required.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/docker%20ps.jpg)
 
 ### Target Machines & Beats
 
@@ -130,13 +137,15 @@ One of the tests was performed by a script created to loop SSH access to Web-1 w
 
    ELK Stack Filebeat-
 
-Script to emulate: Next page
+Script to emulate:
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/ScriptEmulate.jpg)
 
 The failed login attempts:
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/failedloginattempts.jpg)
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/failedloginattempts2.jpg)
 
 This test was performed by installing ‘stress’ on Web-1 and Web-1, the command ‘sudo stress --cpu 1’ ran to utilize and overwork the CPU on both machines. This verified Metricbeat was able to gather the info and display this in the dashboard.
 
@@ -144,21 +153,22 @@ Elk Stack Metricbeat-
 
 ‘Stress’ on Web-1:
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/stressweb1.jpg)
 
 ‘Stress’ on Web-2
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/stressweb2.jpg)
 
 Metricbeat was also utilized to detect a DoS web attack being performed on Web-1.  This attack was performed by running a script created to perform a continuous loop of 5000 web request, also generating index.html files.
 
 Script:
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/ddosscript.jpg)
 
 Baseline:
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/baseline.jpg)
 
 Attack Detected:
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Elk%20Stack%20Images/attackdetected.jpg)

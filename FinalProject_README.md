@@ -63,8 +63,41 @@ Target 1
 
 ![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/wpscanfl2.jpg)
 
+  - Exploited the weak password for user “michael” by guessing the password was “michael”.
+  - Exploited the open Port 22 SSH with command: ssh michael@192.168.1.110 and using the password “michael”
+  - Searched for the flag by navigating to the root directory and using command: find -type f -iname ‘flag*’
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/SSHCommand.jpg)
 
+  - The search results rendering the “flag2.txt” file in directory /var/www/:
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/SearchFl2.jpg)
+
+  - Using the cat command to display the content of the “flag2.txt” file:
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/CatFlag2.jpg)
+
+        Flag3.txt: {afc01ab56b50591e7dccf93122770cd2} and Flag4.txt: {715dea6c055b9fe3337544932f2941ce}
+
+- Exploit Used
+  - Inspecting wp-config.php, while connected to Michael, to look for root access password to MySQL database, discovered user name and password.
+  - Cat /var/www/html/wordpress/wp-config.php 
+ 
+ ![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/DBCreds.jpg)
+ 
+    Logged into MySQL server with the following command: Mysql -u root -PR@v3nSecurity - D wordpress
+    
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/mysqlcommand.jpg)
+
+    Used the following command to show the tables present in the database: SHOW TABLES;
+    
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/ShowTables.jpg)
+
+    Used the following command to inspect communications on the website: SELECT * FROM wp_posts;
+  - Discovered Flags 3 and 4 within wp_posts.
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/Flag3and4.jpg)
+ 
 
 
 

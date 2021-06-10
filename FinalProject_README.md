@@ -7,21 +7,26 @@ To start, your team needs to confirm that newly created alerts are working. Once
 You will then report back all your findings to both the SOC manager and the Engineering Manager with appropriate analysis.
 
 Red Team: Summary of Operations
+
 Table of Contents
-Exposed Services
-Critical Vulnerabilities
-Exploitation
-Exposed Services
+-Exposed Services
+-Critical Vulnerabilities
+-Exploitation
+-Exposed Services
+
 Nmap scan results for each machine reveal the below services and OS details:
+
 $ nmap -A -T4 192.168.1.110
   
 This scan identifies the services below as potential points of entry:
+
 Target 1
 Port 80: Apache httpd 2.4.10
 Port 22: SSH OpenSSH 6.7p1
 Port 111: rpcbind 2-4
 Port 139 netbios-ssn Samba smbd 3.X-4.X
 Port 445: netbios-ssn Samba smbd 4.2.14-Debian
+
 The following vulnerabilities were identified on target:
 Target 1
 Lack of password parameters to ensure strong, complex user passwords, not being able to include any of the user name in the password.

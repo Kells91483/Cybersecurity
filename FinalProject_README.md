@@ -228,31 +228,33 @@ You must inspect your traffic capture to answer the following questions:
 
         Frank-N-Ted
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/FrankNTed.jpg)
 
 2. What is the IP address of the Domain Controller (DC) of the AD network?
 
         10.6.12.157
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/DCAD.jpg)
 
 3. What is the name of the malware downloaded to the 10.6.12.203 machine?
         
         June11.dll
 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/June.jpg)
 
   - Once you have found the file, export it to your Kali machine's desktop.
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/KaliDesktopJune.jpg)
 
 4. Upload the file to VirusTotal.com.
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/VirusTotal.jpg)
 
 5. What kind of malware is this classified as?
 
         Trojan
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/Trojan.jpg)
 
 Vulnerable Windows Machine
 
@@ -262,25 +264,25 @@ Vulnerable Windows Machine
         IP address: 172.16.4.205
         MAC address: 00:59:07:b0:63:a4
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/RotterdamPC.jpg)
 
 2. What is the username of the Windows user whose computer is infected?
 
         admin-ajax
  
- 
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/ajax.jpg)
  
 3.  What are the IP addresses used in the actual infection traffic?
 
         172.16.4.205, 31.7.62.214, 185.243.115.84, 166.62.111.64
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/IPaddressTraffic.jpg)
 
 4. As a bonus, retrieve the desktop background of the Windows host.
 
         Potentially one of the pictures that are saved on the desktop below: 
         
-        
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/PossibleDesktopImages.jpg)        
         
 Illegal Downloads
 
@@ -290,11 +292,14 @@ Illegal Downloads
         Windows username: elmer.blanco
         OS version: Windows 10 64 Bit
         
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/IllegalDown1.jpg)
 
 2. Which torrent file did the user download?
 	
         Btdownload.php...Betty_Boop_Rhythm_on-the_Reservation.avi.torrent
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/TorrentDownload.jpg)
+
 
 
 

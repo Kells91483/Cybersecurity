@@ -113,7 +113,7 @@ Suggestions for Going Further
 
 Network Topology
 
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/FFP4.jpg)
 
 The following machines were identified on the network:
 
@@ -142,17 +142,47 @@ The following machines were identified on the network:
   - Purpose: Filebeat and Metricbeat are installed and will forward logs to the ELK machine.
   - IP Address: 192.168.1.105
 
-Description of Targets
+### Description of Target
+
 The target of this attack was: Target 1 192.168.1.110
+
 Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
-Monitoring the Targets
+
+### Monitoring the Targets
+
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
+
 Name of Alert 1
-HTTP Request Size Monitor is implemented as follows:
-Metric: Packetbeat 7.8.0
-Threshold: 3500 request in span of a minute
-Vulnerability Mitigated: Directory Transversal as well as other potential remote attacks being performed by malicious actors.
-Reliability: This will break down into 58 requests per second which should not lead to an amount of false positives that will create alert fatigue, keeping the SOC effective. Medium Reliability.
+
+- HTTP Request Size Monitor is implemented as follows:
+  - Metric: Packetbeat 7.8.0
+  - Threshold: 3500 request in span of a minute
+  - Vulnerability Mitigated: Directory Transversal as well as other potential remote attacks being performed by malicious actors.
+  - Reliability: This will break down into 58 requests per second which should not lead to an amount of false positives that will create alert fatigue, keeping the SOC effective. Medium Reliability.
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Defensive%20Images/HTTPSize.jpg)
+
+Name of Alert 2
+
+- Excessive HTTP Errors:
+  - Metric: Packetbeat 7.8.0
+  - Threshold: Above 400 request for the last 5 minutes
+  - Vulnerability Mitigated: Brute Force Attack or DDOS
+  - Reliability: This will break down into 0.75 requests per second which should not lead to an amount of false positives that will create alert fatigue, keeping the SOC effective. High Reliability.
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Defensive%20Images/HTTPErrors.jpg)
+
+Name of Alert 3
+
+- CPU Usage Monitor:
+  - Metric: Metricbeat 7.7.0
+  - Threshold: Above 0.5 for the last 5 minutes
+  - Vulnerability Mitigated: Brute Force Attack, Possible Malware, or Cryptomining
+  - Reliability:  This will alert if the CPU usage is greater than 50%, this could potentially create an excessive amount of false alerts. This may need to be raised to 0.6 or 60% usage. Potential Low Reliability.
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Defensive%20Images/CPUusage.jpg)
+
+
  
 
 

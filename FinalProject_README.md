@@ -97,6 +97,62 @@ Target 1
   - Discovered Flags 3 and 4 within wp_posts.
 
 ![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/Flag3and4.jpg)
+
+
+## Defensive Stage
+
+## Blue Team: Summary of Operations
+
+Table of Contents
+- Network Topology
+- Description of Targets
+- Monitoring the Targets
+- Patterns of Traffic & Behavior
+
+Suggestions for Going Further
+
+Network Topology
+
+
+
+The following machines were identified on the network:
+
+- Target 1:
+  - Operating System: Linux  3.6
+  - Purpose: Exposes a vulnerable WordPress server.
+  - IP Address: 192.168.1.110
+
+- Target 2
+  - Operating System: Linux 4.15
+  - Purpose: A Bonus victim machine to attack if time permits.
+  - IP Address: 192.168.1.115
+
+- Kali
+  - Operating System: Kali Linux 5.4.0
+  - Purpose: A standard Kali Linux machine for use in the penetration test for Target 1.
+  - IP Address: 192.168.1.90
+
+- ELK
+  - Operating System: Linux 4.15.0
+  - Purpose: The same ELK setup created in Project 1. It holds the Kibana dashboards.
+  - IP Address: 192.168.1.100
+
+- Capstone
+  - Operating System: Linux 4.15.0
+  - Purpose: Filebeat and Metricbeat are installed and will forward logs to the ELK machine.
+  - IP Address: 192.168.1.105
+
+Description of Targets
+The target of this attack was: Target 1 192.168.1.110
+Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
+Monitoring the Targets
+Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
+Name of Alert 1
+HTTP Request Size Monitor is implemented as follows:
+Metric: Packetbeat 7.8.0
+Threshold: 3500 request in span of a minute
+Vulnerability Mitigated: Directory Transversal as well as other potential remote attacks being performed by malicious actors.
+Reliability: This will break down into 58 requests per second which should not lead to an amount of false positives that will create alert fatigue, keeping the SOC effective. Medium Reliability.
  
 
 

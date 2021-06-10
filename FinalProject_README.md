@@ -10,13 +10,13 @@ You will then report back all your findings to both the SOC manager and the Engi
 
 Table of Contents
 
--Exposed Services
+    -Exposed Services
 
--Critical Vulnerabilities
+    -Critical Vulnerabilities
 
--Exploitation
+    -Exploitation
 
--Exposed Services
+    -Exposed Services
 
 Nmap scan results for each machine reveal the below services and OS details:
 
@@ -26,15 +26,15 @@ This scan identifies the services below as potential points of entry:
 
 Target 1
 
-Port 80: Apache httpd 2.4.10
+    Port 80: Apache httpd 2.4.10
 
-Port 22: SSH OpenSSH 6.7p1
+    Port 22: SSH OpenSSH 6.7p1
 
-Port 111: rpcbind 2-4
+    Port 111: rpcbind 2-4
 
-Port 139 netbios-ssn Samba smbd 3.X-4.X
+    Port 139 netbios-ssn Samba smbd 3.X-4.X
 
-Port 445: netbios-ssn Samba smbd 4.2.14-Debian
+    Port 445: netbios-ssn Samba smbd 4.2.14-Debian
 
 The following vulnerabilities were identified on target:
 

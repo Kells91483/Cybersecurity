@@ -55,3 +55,14 @@ Exploit Used
 
 ![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/Flag1.jpg)
 
+        Flag2.txt: {fc3fd58dcdad9ab23faca6e9a34e581c}
+
+Exploit Used
+- Remote SSH connection after identifying Michael as a user, using wpscan.
+- Wpscan --url http://192.168.1.110/wordpress --enumerate u
+
+![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Offensive%20Images/wpscanfl2.jpg)
+
+
+
+

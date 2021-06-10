@@ -182,8 +182,38 @@ Name of Alert 3
 
 ![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Defensive%20Images/CPUusage.jpg)
 
+### Suggestions for Going Further
 
- 
+The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
+
+- Excessive HTTP Errors
+  - Patch: Implement WordPress Hardening by installing WordPress security plugin, website firewall such as Sucuri.
+  - Why It Works: The Sucuri Firewall is a cloud-based WAF that stops website hacks and attacks. It routes traffic through the firewall on the DNS level and back to the WordPress host. Updates with virtual patching and hardening, prevents wpscan access and blacklist suspected lPs.
+
+- HTTP Request Size Monitor
+  - Patch: Configure HTTP request limits on the web server
+  - Why It Works: Request limits define the validation criteria for incoming requests by enforcing size limits on HTTP request header fields. The requests that have fields larger than the specified maximums are dropped. This can mitigate buffer overflow exploits and prevent DoS attacks.
+
+- CPU Usage Monitor
+  - Patch: Install cpulimit, limits excessive CPU use by setting limits. Install with apt-get install cpulimit
+  - Why It Works: Cpulimit enables the user to set limits on the CPU usage that is found to be consuming excessive CPU by using top. It can work in conjunction with this programmed alert. If the alert is triggered the notified SOC analyst can detect which process is consuming the most by using top and then can set a percentage limit utilizing cpulimit.
+
+
+### Additional Suggestions for Going Further
+
+The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
+
+- Exposed/Unfiltered  Port 22
+  - Patch: Filter or whitelist specific IP addresses to connect using Port 22 with a firewall rule.
+  - Why It Works: This creates another layer of security from remote malicious actors by only allowing certain endpoints to connect using Port 22.
+
+- Broken link leading to 192.168.1.110/wordpress
+  - Patch: Broken Link Checker plug-in for WordPress
+  - Why It Works: Automates the process of checking for Broken Links that could expose URLs that will lead to backdoor resources to the general public.
+
+- Weak User Passwords
+  - Patch: sudo apt-get install libpam-pwquality  
+  - Why It Works: Forces users to only use complex passwords with upper, lower and special characters after editing the command-password file at the following directory: /etc/pam.d/. This will help prevent the creation of easily guessed passwords.
 
 
 

@@ -40,14 +40,14 @@ The following vulnerabilities were identified on target:
 
 Target 1
 
-Lack of password parameters to ensure strong, complex user passwords, not being able to include any of the user name in the password.
+        Lack of password parameters to ensure strong, complex user passwords, not being able to include any of the user name in the password.
 
-Open Port 22 that was not filtered by any firewall rules to only allow certain remote IP addresses to remote in.
+        Open Port 22 that was not filtered by any firewall rules to only allow certain remote IP addresses to remote in.
 
-Open Port 80 allowed us to connect to the website. While performing recon using OSINT, we examined the HTML code to potentially execute a code quality attack with possible orphaned web developer notes.
+        Open Port 80 allowed us to connect to the website. While performing recon using OSINT, we examined the HTML code to potentially execute a code quality attack with          possible orphaned web developer notes.
 
-Potential faulty implementation of Least Privilege access to users. User Michael having access to the wp-config.php in the /var/www/html/wordpress directory as well as the wordpress database, may not have been needed for his role.
+        Potential faulty implementation of Least Privilege access to users. User Michael having access to the wp-config.php in the /var/www/html/wordpress directory as well as the wordpress database, may not have been needed for his role.
 
-Broken links on the web page that lead to a backdoor URL: 192.168.1.110/wordpress.
+        Broken links on the web page that lead to a backdoor URL: 192.168.1.110/wordpress.
 
-
+![](

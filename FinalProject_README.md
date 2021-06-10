@@ -24,7 +24,7 @@ $ nmap -A -T4 192.168.1.110
   
 This scan identifies the services below as potential points of entry:
 
-Target 1
+Target 1:
 
     Port 80: Apache httpd 2.4.10
 
@@ -38,7 +38,7 @@ Target 1
 
 The following vulnerabilities were identified on target:
 
-Target 1
+Target 1:
 
         Lack of password parameters to ensure strong, complex user passwords, not being able to include any of the user name in the password.
 

@@ -299,7 +299,7 @@ Illegal Downloads
         Btdownload.php...Betty_Boop_Rhythm_on-the_Reservation.avi.torrent
 
 ![](https://github.com/Kells91483/Cybersecurity/blob/main/Final%20Project/Network%20Images/TorrentDownload.jpg)
-
+![](https://github.com/Kells91483/Cybersecurity/blob/main/TorrentDownload2.jpg)
 
 
 

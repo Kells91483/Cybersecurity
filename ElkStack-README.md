@@ -119,16 +119,17 @@ Update the hosts file to include the IP addresses of the Webservers (Web-1, Web-
 Run the playbook, and navigate to http://157.56.166.106:5601/app/kibana to check that the installation worked as expected.
 
 
-**Bonus** 
+## **Bonus** 
 
 How to guide to setup the Determined_napier Container and run the playbooks:
-SSH Into the Jump-Box-Provisioner: ssh azadmin@104.211.13.46
-Start Docker: sudo docker start determined_napier
-Attach Docker: sudo docker attach determined_napier
-Navigate to the ansible directory: cd /etc/ansible
-Run the ansible playbook located in that directory: ansible-playbook pentest.yml, ansible-playbook install-elk.yml
-Navigate to the ansible directory /roles: cd roles/
-Run the ansible playbooks located in that directory: ansible-playbook filebeat-playbook.yml, ansible-playbook metricbeat-playbook.yml
+
+- SSH Into the Jump-Box-Provisioner: ssh azadmin@104.211.13.46
+- Start Docker: sudo docker start determined_napier
+- Attach Docker: sudo docker attach determined_napier
+- Navigate to the ansible directory: cd /etc/ansible
+- Run the ansible playbook located in that directory: ansible-playbook pentest.yml, ansible-playbook install-elk.yml
+- Navigate to the ansible directory /roles: cd roles/
+- Run the ansible playbooks located in that directory: ansible-playbook filebeat-playbook.yml, ansible-playbook metricbeat-playbook.yml
 
 
 Proof of Performance: 
